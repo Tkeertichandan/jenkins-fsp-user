@@ -53,8 +53,8 @@ pipeline {
                 rm -f "$WEBAPPS_PATH/springbootuserapi.war"
                 rm -rf "$WEBAPPS_PATH/springbootuserapi"
 
-                # Copy new WAR
-                cp SemInlab/target/*.war "$WEBAPPS_PATH/"
+                # Copy new WAR with fixed name
+                cp SemInlab/target/*.war "$WEBAPPS_PATH/springbootuserapi.war"
                 '''
             }
         }
