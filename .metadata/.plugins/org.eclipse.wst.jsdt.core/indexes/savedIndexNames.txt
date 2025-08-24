@@ -1,0 +1,2 @@
+INDEX VERSION 1.4+/Users/keertichandanthatavarthi/BTECH/3rd Year /Odd sem/DevOps_Practice/FSP/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+634144257.index
