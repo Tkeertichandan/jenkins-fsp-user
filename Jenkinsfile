@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     environment {
-        // Add Node.js and Maven paths
         PATH = "/usr/local/bin:/Users/keertichandanthatavarthi/Softwares/apache-maven-3.9.11/bin:${env.PATH}"
         TOMCAT_HOME = "/Users/keertichandanthatavarthi/Softwares/apache-tomcat-10.1.43"
     }
@@ -26,13 +25,11 @@ pipeline {
                 FRONTEND_PATH="$TOMCAT_HOME/webapps/reactuserapi"
 
                 # Remove old frontend
-                if [ -d "$FRONTEND_PATH" ]; then
-                    rm -rf "$FRONTEND_PATH"
-                fi
+                rm -rf "$FRONTEND_PATH"
 
                 # Create new folder and copy dist files
                 mkdir -p "$FRONTEND_PATH"
-                cp -R STUDENTAPI-REACT/dist/* "$FRONTEND_PATH/"
+                cp -R UserF/dist/* "$FRONTEND_PATH/"
                 '''
             }
         }
@@ -57,7 +54,7 @@ pipeline {
                 rm -rf "$WEBAPPS_PATH/springbootuserapi"
 
                 # Copy new WAR
-                cp STUDENTAPI-SPRINGBOOT/target/*.war "$WEBAPPS_PATH/"
+                cp SemInlab/target/*.war "$WEBAPPS_PATH/"
                 '''
             }
         }
