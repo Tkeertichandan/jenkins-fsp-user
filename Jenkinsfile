@@ -12,7 +12,7 @@ pipeline {
         // ===== FRONTEND BUILD =====
         stage('Build Frontend') {
             steps {
-                dir('USERAPI-REACT') {
+                dir('UserF') {
                     sh 'npm install'
                     sh 'npm run build'
                 }
@@ -40,7 +40,7 @@ pipeline {
         // ===== BACKEND BUILD =====
         stage('Build Backend') {
             steps {
-                dir('USERAPI-SPRINGBOOT') {
+                dir('SemInlab') {
                     sh 'mvn clean package'
                 }
             }
