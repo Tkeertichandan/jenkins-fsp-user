@@ -12,7 +12,7 @@ export default function User() {
   });
   const [editMode, setEditMode] = useState(false);
 
-  const baseUrl = "http://localhost:2008/user"; 
+  const baseUrl = "http://localhost:2030/user"; 
 
   // Fetch all users
   const fetchUsers = async () => {
