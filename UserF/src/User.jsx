@@ -12,7 +12,7 @@ export default function User() {
   });
   const [editMode, setEditMode] = useState(false);
 
-  const baseUrl = "http://localhost:2030/user"; 
+  const baseUrl = "http://localhost:2030/springbootuserapi/user"; 
 
   // Fetch all users
   const fetchUsers = async () => {
